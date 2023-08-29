@@ -24,8 +24,8 @@ $teste3 = fn () => new React\Promise\Promise(function ($resolve) {
 });
 
 
-//Parallel vai chamar todas as funções ao mesmo tempo  
-React\Async\parallel([   // aqui você cria um array chamando as funções anônimas 
+//series  
+React\Async\series([   // aqui você cria um array chamando as funções anônimas 
     fn () => $teste1(),
     fn () => $teste2(),
     fn () => $teste3(),
@@ -52,13 +52,11 @@ bool(false)
 string(1) "1"  esse retornou primeiro por  o tempo de execução dele demoro 1 segundo
 string(1) "3"  esse retornou primeiro por  o tempo de execução dele demoro 2 segundo
 string(1) "2"  esse retornou primeiro por  o tempo de execução dele demoro 5 segundo
-Total Levo 5 
+Total Levo 8 
 
-Por que levou 5 segundos ?
-
- bom como eu escrevi na linha 27 todas as funções foram chamadas  juntas então,
- então o tempo de execução delas  não  somam.
- Não precisa esperar que uma função esteja pronta para poder iniciar a outra função,
- elas estão sendo chamadas aos mesmo tempo e sendo executadas ao mesmo tempo , so que 
- o tempo da execução mais demorado , vai ser da função que demorou mais. 
+Por que levou 8 segundos ?
+ Bom ao contrario da parallel , quando é em series uma função só vai iniciar  quando a outra terminar 
+ então o tempo de execução delas somam 1 + 2 + 5 = 8.
+ precisa esperar que uma função esteja pronta para poder iniciar a outra função.
+ Elas estão sendo chamadas em series uma de cada vez. 
 */    
