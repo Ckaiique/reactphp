@@ -15,7 +15,7 @@ Para utilizar o ReactPHP em seu projeto PHP, você tem duas opções:
      composer require react/async:^4.1.0
      ```
 
-   - Para PHP 7:
+   - Para PHP 5+, PHP 7+:
      ```bash
      composer require react/async:^3
      ```
