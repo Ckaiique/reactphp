@@ -61,15 +61,8 @@ React\Async\parallel(
 echo ('kaique') . PHP_EOL;  
 
 
-
-
-
-
-/*o seu resultado vai ser  igual a esse aqui  
-Bom eu esatva com duvidas de como eu poderia criar Promise dentro de um foreach ou for 
-Aqui esta um exemplo de como consgue 
-
-
+/* O resultado será semelhante a este:
+Estava com dúvidas sobre como criar Promises dentro de um loop, como um foreach ou for. Aqui está um exemplo de como fazer:
 kaique
 string(1) "3"
 string(1) "1"
@@ -83,12 +76,10 @@ string(1) "3"
 string(1) "3"
 string(1) "3"
 string(1) "3"
-Total Levo 9 segundos
+Total de Tempo: 9 segundos
 
-Por que levou 5 segundos ?
- bom como eu escrevi na linha 27 todas as funções foram chamadas  juntas então,
- então o tempo de execução delas  não  somam.
- Não precisa esperar que uma função esteja pronta para poder iniciar a outra função,
- elas estão sendo chamadas aos mesmo tempo e sendo executadas ao mesmo tempo , so que 
- o tempo da execução mais demorado , vai ser da função que demorou mais. 
-*/    
+Por que levou 9 segundos?
+Bem, como expliquei anteriormente, todas as funções foram chamadas simultaneamente, sem acumular seus tempos de execução.
+Não é necessário aguardar o término de uma função para iniciar outra. Elas estão sendo chamadas e executadas simultaneamente. 
+No entanto, o tempo de execução mais longo determina o tempo total do processo.
+*/

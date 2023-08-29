@@ -46,18 +46,16 @@ React\Async\parallel([   // aqui você cria um array chamando as funções anôn
 
 echo ('kaique') . PHP_EOL;  
 
-/*o seu resultado vai ser  igual a esse aqui  
+/* O resultado será semelhante a este:
 kaique
 bool(false)
-string(1) "1"  esse retornou primeiro por  o tempo de execução dele demoro 1 segundo
-string(1) "3"  esse retornou primeiro por  o tempo de execução dele demoro 2 segundo
-string(1) "2"  esse retornou primeiro por  o tempo de execução dele demoro 5 segundo
-Total Levo 5 
+string(1) "1"  - Este retornou primeiro porque seu tempo de execução foi de 1 segundo.
+string(1) "3"  - Este retornou em segundo lugar devido a um tempo de execução de 2 segundos.
+string(1) "2"  - Este retornou por último, já que seu tempo de execução foi de 5 segundos.
+Total de Tempo: 5 segundos
 
-Por que levou 5 segundos ?
- bom como eu escrevi na linha 27 todas as funções foram chamadas  juntas então,
- então o tempo de execução delas  não  somam.
- Não precisa esperar que uma função esteja pronta para poder iniciar a outra função,
- elas estão sendo chamadas aos mesmo tempo e sendo executadas ao mesmo tempo , so que 
- o tempo da execução mais demorado , vai ser da função que demorou mais. 
-*/    
+Por que levou 5 segundos?
+Bem, conforme mencionado na linha 27, todas as funções foram chamadas simultaneamente. Os tempos de execução não são acumulativos.
+Não é necessário aguardar o término de uma função para iniciar outra. Todas estão sendo chamadas e executadas simultaneamente. No entanto,
+o tempo de execução mais longo é determinado pelo funcionamento mais demorado entre elas.
+*/ 

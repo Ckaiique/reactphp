@@ -46,17 +46,16 @@ React\Async\series([   // aqui você cria um array chamando as funções anônim
 
 echo ('kaique') . PHP_EOL;  
 
-/*o seu resultado vai ser  igual a esse aqui  
+/* O resultado será semelhante a este:
 kaique
 bool(false)
-string(1) "1"  esse retornou primeiro por  o tempo de execução dele demoro 1 segundo
-string(1) "3"  esse retornou primeiro por  o tempo de execução dele demoro 2 segundo
-string(1) "2"  esse retornou primeiro por  o tempo de execução dele demoro 5 segundo
-Total Levo 8 
+string(1) "1"  - Este retornou primeiro pois seu tempo de execução foi de 1 segundo.
+string(1) "3"  - Este retornou em segundo lugar pois seu tempo de execução foi de 2 segundos.
+string(1) "2"  - Este retornou por último pois seu tempo de execução foi de 5 segundos.
+Total de Tempo: 8 
 
-Por que levou 8 segundos ?
- Bom ao contrario da parallel , quando é em series uma função só vai iniciar  quando a outra terminar 
- então o tempo de execução delas somam 1 + 2 + 5 = 8.
- precisa esperar que uma função esteja pronta para poder iniciar a outra função.
- Elas estão sendo chamadas em series uma de cada vez. 
-*/    
+Por que levou 8 segundos?
+Ao contrário do método "parallel", quando se utiliza o método "series", uma função inicia somente quando a anterior termina.
+Portanto, o tempo de execução dessas funções é acumulativo: 1 + 2 + 5 = 8.
+É necessário aguardar que uma função esteja pronta para que a próxima possa iniciar.
+As funções estão sendo chamadas em sequência, uma após a outra.*/
