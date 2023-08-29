@@ -25,3 +25,13 @@ Para utilizar o ReactPHP em seu projeto PHP, você tem duas opções:
      composer require react/event-loop:^1.4.0
      composer require react/promise:^3.0.0
      ```
+
+### Motivo para Estudar o ReactPHP
+
+Decidi explorar o ReactPHP devido a um desafio em minha empresa. Com a escalabilidade crescente de nossos processos, percebi que o desempenho estava sendo afetado negativamente. Tornou-se evidente que era necessário buscar uma solução mais eficiente para melhorar o desempenho.
+
+O ReactPHP se destacou como uma opção promissora, especialmente para lidar com tarefas assíncronas e processamento concorrente. Sua natureza assíncrona permite que os processos sejam executados de forma eficiente e paralela, melhorando significativamente a velocidade de execução.
+
+Espero que o uso do ReactPHP possa ajudar a otimizar nossos fluxos de trabalho e oferecer uma solução mais robusta para as demandas em crescimento da nossa empresa.
+
+Fique à vontade para personalizar essa explicação de acordo com a sua experiência e contexto. Certamente, o ReactPHP pode ser uma ferramenta valiosa para otimizar processos e melhorar a eficiência.
