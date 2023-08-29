@@ -55,7 +55,6 @@ string(1) "2"  esse retornou primeiro por  o tempo de execução dele demoro 5 s
 Total Levo 5 
 
 Por que levou 5 segundos ?
-
  bom como eu escrevi na linha 27 todas as funções foram chamadas  juntas então,
  então o tempo de execução delas  não  somam.
  Não precisa esperar que uma função esteja pronta para poder iniciar a outra função,
